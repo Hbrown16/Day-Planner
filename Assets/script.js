@@ -1,3 +1,34 @@
+//variable to create clock display
+var time = moment().format('dddd, MMMM do YYYY, h:mm:ss a')
+
+//variable that will help to link to each variable hour
+var hours = moment().hours();
+
+$('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
+// Creates live clock
+function update() {
+  $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
+}
+setInterval(update,1000);
+
+$(".time-slot").each(function(){
+  var currentTime = parseInt($(this).attr("id").split("_")[1]);
+  console.log(currentTime);
+
+  if(currentTime === hours){
+    console.log("Equal");
+    $(this).childern(".description").addClass("current-time");
+  }else if(currentTime < hours){
+    $(this).childern(".description").addClass("past-time");
+  }else{
+    $(this).childern(".description").addClass("future-time");
+  }
+})
+
+//Save Button/Event Listener and Function
+$(document).on('click',"saveBtn", function(event) {
+  event.preventDefault()
+})
 $(document).ready(function () {
     // listen for save button clicks
     $('.saveBtn').on('click', function () {
