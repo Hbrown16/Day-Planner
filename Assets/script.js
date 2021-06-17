@@ -27,7 +27,10 @@ $(".time-slot").each(function(){
 
 //Save Button/Event Listener and Function
 $(document).on('click',"saveBtn", function(event) {
-  event.preventDefault()
+  event.preventDefault();
+  var value = $(this).siblings("description").val();
+  var times = $(this).parent().attr("id");
+  localStorage.setItem(times,value);
 })
 $(document).ready(function () {
     // listen for save button clicks
