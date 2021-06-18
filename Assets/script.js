@@ -11,7 +11,7 @@ function update() {
 }
 setInterval(update,1000);
 
-$(".time-slot").each(function(){
+$(".time-block").each(function(){
   var currentTime = parseInt($(this).attr("id").split("_")[1]);
   console.log(currentTime);
 
