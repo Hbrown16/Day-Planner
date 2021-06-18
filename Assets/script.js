@@ -1,5 +1,5 @@
 //variable to create clock display
-var time = moment().format('dddd, MMMM do YYYY, h:mm:ss a')
+var time = moment().format('dddd, MMMM do YYYY, h:mm:ss a');
 
 //variable that will help to link to each variable hour
 var hours = moment().hours();
@@ -17,11 +17,11 @@ $(".time-slot").each(function(){
 
   if(currentTime === hours){
     console.log("Equal");
-    $(this).childern(".description").addClass("current-time");
+    $(this).childern(".description").addClass("present");
   }else if(currentTime < hours){
-    $(this).childern(".description").addClass("past-time");
+    $(this).childern(".description").addClass("past");
   }else{
-    $(this).childern(".description").addClass("future-time");
+    $(this).childern(".description").addClass("future");
   }
 })
 
@@ -29,8 +29,8 @@ $(".time-slot").each(function(){
 $(document).on('click',"saveBtn", function(event) {
   event.preventDefault();
   var hour = $(this).siblings("description").val();
-  var times = $(this).parent().attr("id");
-  localStorage.setItem(times,hour);
+  var time = $(this).parent().attr("id");
+  localStorage.setItem(time,hour);
 })
 
 // load any saved data from localStorage

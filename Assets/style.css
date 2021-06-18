@@ -2,10 +2,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
-    background-color:cornflowerblue;
+    background-color:rgb(103, 126, 168);
   }
   
-  .textarea {
+  textarea {
     background: transparent;
     border: none;
     resize: none;
@@ -70,4 +70,6 @@ body {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
+
+  
   
