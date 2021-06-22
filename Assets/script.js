@@ -1,3 +1,4 @@
+
 //variable to create clock display
 var time = moment().format('dddd, MMMM do YYYY, h:mm:ss a');
 
@@ -7,14 +8,14 @@ var hours = moment().hours();
 
 $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
 // Creates live clock
-function (update) {
+function update() {
   $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
-  setInterval(update,1000);
 }
+setInterval(update,1000);
 
 
 $(".time-block").each(function(){
-  var currentTime = parseInt($(this).attr("id").split("_")[1]);
+  var currentTime = parseInt($(this).attr("id").split("-")[1]);
   console.log(currentTime);
 
   if(currentTime === hours){
