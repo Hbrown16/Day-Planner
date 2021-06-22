@@ -4,12 +4,14 @@ var time = moment().format('dddd, MMMM do YYYY, h:mm:ss a');
 //variable that will help to link to each variable hour
 var hours = moment().hours();
 
+
 $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
 // Creates live clock
-function update() {
+function () {
   $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
+  setInterval(update,1000);
 }
-setInterval(update,1000);
+
 
 $(".time-block").each(function(){
   var currentTime = parseInt($(this).attr("id").split("_")[1]);
