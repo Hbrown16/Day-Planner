@@ -1,15 +1,15 @@
 
 //variable to create clock display
-var time = moment().format('dddd, MMMM do YYYY, h:mm:ss a');
+var time = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');
 
 //variable that will help to link to each variable hour
 var hours = moment().hours();
 
 
-$('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
+$('#currentDay').html(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));
 // Creates live clock
 function update() {
-  $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
+  $('#currentDay').html(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));
 }
 setInterval(update,1000);
 
