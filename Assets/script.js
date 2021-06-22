@@ -7,7 +7,7 @@ var hours = moment().hours();
 
 $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
 // Creates live clock
-function () {
+function (update) {
   $('#currentDay').html(moment().format('dddd, MMMM do YYYY, h:mm:ss a'));
   setInterval(update,1000);
 }
