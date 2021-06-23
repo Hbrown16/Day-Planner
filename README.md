@@ -26,6 +26,10 @@ THEN the saved events persist
 ```
 
 ## Demo
+![DayPlanner](Assets/Images/DPdemo.gif)
+
 
 ## Helpful Links
 
+
+[Moment.Js](https://momentjs.com/)

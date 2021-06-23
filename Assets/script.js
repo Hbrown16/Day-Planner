@@ -20,18 +20,18 @@ $(".time-block").each(function(){
 
   if(currentTime === hours){
     console.log("Equal");
-    $(this).childern(".description").addClass("present");
+    $(this).children(".description").addClass("present");
   }else if(currentTime < hours){
-    $(this).childern(".description").addClass("past");
+    $(this).children(".description").addClass("past");
   }else{
-    $(this).childern(".description").addClass("future");
+    $(this).children(".description").addClass("future");
   }
 })
 
 //Save Button/Event Listener and Function
-$(document).on('click',"saveBtn", function(event) {
+$(document).on('click',".saveBtn", function(event) {
   event.preventDefault();
-  var hour = $(this).siblings("description").val();
+  var hour = $(this).siblings(".description").val();
   var time = $(this).parent().attr("id");
   localStorage.setItem(time,hour);
 })
@@ -44,12 +44,12 @@ $('#hour-9 .description').val(localStorage.getItem('hour-9'));
 $('#hour-10 .description').val(localStorage.getItem('hour-10'));
 $('#hour-11 .description').val(localStorage.getItem('hour-11'));
 $('#hour-12 .description').val(localStorage.getItem('hour-12'));
-$('#hour-1 .description').val(localStorage.getItem('hour-1'));
-$('#hour-2 .description').val(localStorage.getItem('hour-2'));
-$('#hour-3 .description').val(localStorage.getItem('hour-3'));
-$('#hour-4 .description').val(localStorage.getItem('hour-4'));
-$('#hour-5 .description').val(localStorage.getItem('hour-5'));
-$('#hour-6p .description').val(localStorage.getItem('hour-6p'));
+$('#hour-13 .description').val(localStorage.getItem('hour-1'));
+$('#hour-14 .description').val(localStorage.getItem('hour-2'));
+$('#hour-15 .description').val(localStorage.getItem('hour-3'));
+$('#hour-16 .description').val(localStorage.getItem('hour-4'));
+$('#hour-17 .description').val(localStorage.getItem('hour-5'));
+$('#hour-18 .description').val(localStorage.getItem('hour-6p'));
   
   
   

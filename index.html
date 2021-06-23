@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src= "https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Assets/style.css" />
     <title>Work Day Scheduler</title>
@@ -18,7 +18,7 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead">Tuesday, June 22nd 2021, 7:22:30 pm</p>
+      <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
         <!-- Timeblocks go here -->
@@ -34,73 +34,73 @@
             <div class="col-md-1 hour">7 AM</div>
             <textarea class="col-md-10 description">
             </textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--8 am Time Slot-->
         <div id="hour-8" class="row time-block">
             <div class="col-md-1 hour">8 AM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--9 am Time Slot-->
         <div id="hour-9" class="row time-block">
             <div class="col-md-1 hour">9 AM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--10 am Time Slot-->
         <div id="hour-10" class="row time-block">
             <div class="col-md-1 hour">10 AM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--11 am Time Slot-->
         <div id="hour-11" class="row time-block">
             <div class="col-md-1 hour">11 AM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
          </div>
         <!--12 pm Time Slot-->
         <div id="hour-12" class="row time-block">
             <div class="col-md-1 hour">12 PM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--1 pm Time Slot-->
-        <div id="hour-1" class="row time-block">
+        <div id="hour-13" class="row time-block">
             <div class="col-md-1 hour">1 PM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--2 pm Time Slot-->
-        <div id="hour-2" class="row time-block">
+        <div id="hour-14" class="row time-block">
             <div class="col-md-1 hour">2 PM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--3 pm Time Slot-->
-        <div id="hour-3" class="row time-block">
+        <div id="hour-15" class="row time-block">
             <div class="col-md-1 hour">3 PM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--4 pm Time Slot-->
-        <div id="hour-4" class="row time-block">
+        <div id="hour-16" class="row time-block">
             <div class="col-md-1 hour">4 PM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--5 pm Time Slot-->
-        <div id="hour-5" class="row time-block">
+        <div id="hour-17" class="row time-block">
             <div class="col-md-1 hour">5 PM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
         <!--6 pm Time Slot-->
-        <div id="hour-6p" class="row time-block">
+        <div id="hour-18" class="row time-block">
             <div class="col-md-1 hour">6 PM</div>
             <textarea class="col-md-10 description"></textarea>
-            <button class="btn saveBtn col-md-1"><i calss="fas fa-save"></i></button>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
     </div>
     <!--Link to Javascript file-->
@@ -108,6 +108,6 @@
     
     <!--Link to JQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
   </body>
 </html>
